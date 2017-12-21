@@ -137,7 +137,7 @@ function GetRaidFromNotification( notificationId ) {
 	return result;
 }
 
-fetch( 'https://www.gbfraiders.com/getraids' ).then( function ( response ) {
+fetch( 'https://afternoon-castle-83105.herokuapp.com/getraids' ).then( function ( response ) {
 	console.log( "Got response from server. Parsing to JSON..." );
 	return response.json();
 } ).then( function ( tempRaidConfigs ) {
@@ -209,7 +209,7 @@ socket.on( 'tweet', function ( data ) {
 						title = raidConfig.english;
 					}
 					try {
-						fetch( 'https://www.gbfraiders.com' + raidConfig.image ).then( function ( response ) {
+						fetch( 'https://afternoon-castle-83105.herokuapp.com' + raidConfig.image ).then( function ( response ) {
 							return response.blob();
 						} ).then( function ( myBlob ) {
 							var objectURL = URL.createObjectURL( myBlob );
