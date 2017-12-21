@@ -1,4 +1,4 @@
-var socket = io.connect( 'https://www.gbfraiders.com/' );
+var socket = io.connect( 'https://afternoon-castle-83105.herokuapp.com/' );
 var raids = [];
 var raidConfigs = [];
 var trackedRaids = [];
